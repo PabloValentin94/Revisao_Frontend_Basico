@@ -6,9 +6,6 @@
 
 #container #home {
 
-    height: 100%;
-    width: 100%;
-    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,8 +45,9 @@
 #container #home #title h1 {
 
     font-size: 50px;
-    text-transform: uppercase;
     color: var(--main-color);
+    text-transform: uppercase;
+    text-align: center;
 
 }
 
@@ -57,32 +55,30 @@
 
     font-size: 30px;
     color: var(--main-color);
+    text-align: center;
 
 }
 
-#container #datas {
+#container #data {
 
-    height: 100%;
-    width: 100%;
-    min-height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 75px;
 
 }
 
-#container #datas #contacts {
+#container #data #contacts {
 
-    max-width: 30%;
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: auto;
     gap: 30px;
 
 }
 
-#container #datas #contacts a {
+#container #data #contacts a {
 
     display: flex;
     align-items: center;
@@ -95,7 +91,7 @@
 
 }
 
-#container #datas #contacts a i {
+#container #data #contacts a i {
 
     background-color: transparent;
     font-size: 30px;
@@ -103,37 +99,118 @@
 
 }
 
-#container #datas #contacts a:hover {
+#container #data #contacts a:hover {
 
     background-color: var(--main-color);
 
 }
 
-#container #datas #contacts a:hover i {
+#container #data #contacts a:hover i {
 
     color: var(--page-color);
 
 }
 
-#container #datas #about-me {
+#container #data #about-me {
 
-    max-width: 65%;
+    max-width: 70%;
 
 }
 
-#container #datas #about-me article {
+#container #data #about-me article {
 
     height: 100%;
     width: 100%;
 
 }
 
-#container #datas #about-me article p {
+#container #data #about-me article p {
 
     height: 100%;
     width: 100%;
     font-size: 25px;
     color: var(--neutral-color);
     text-align: justify;
+
+}
+
+/* Responsividade: */
+
+@media (max-width: 1024px) {
+
+    #container #home {
+
+        flex-direction: column;
+        gap: 50px;
+
+    }
+
+    #container #home figure {
+
+        height: 250px;
+        width: 250px;
+
+    }
+
+    #container #home #title h1 {
+
+        font-size: 40px;
+    
+    }
+    
+    #container #home #title h2 {
+    
+        font-size: 25px;
+    
+    }
+
+    #container #data #about-me {
+
+        max-width: 80%;
+    
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    #container #home figure {
+
+        height: 200px;
+        width: 200px;
+
+    }
+
+    #container #home #title h1 {
+
+        font-size: 35px;
+    
+    }
+    
+    #container #home #title h2 {
+    
+        font-size: 20px;
+    
+    }
+
+    #container #data {
+
+        justify-content: flex-start;
+        gap: 50px;
+    
+    }
+    
+    #container #data #contacts {
+
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto auto;
+    
+    }
+
+    #container #data #about-me {
+
+        max-width: 100%;
+    
+    }
 
 }
