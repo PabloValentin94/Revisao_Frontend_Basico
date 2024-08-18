@@ -1,3 +1,25 @@
+/* Recursos: */
+
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
+/* Constantes: */
+
+:root {
+
+    --main-color: #011F4B;
+    --page-color: #EEEEEE;
+    --neutral-color: #000000;
+
+}
+
+.dark_mode:root {
+
+    --main-color: #FFFF00;
+    --page-color: #111111;
+    --neutral-color: #FFFFFF;
+
+}
+
 /* Estilos: */
 
 * {
@@ -6,6 +28,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    transition: 0.75s;
 
 }
 
@@ -17,5 +40,86 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    background-color: var(--page-color);
+
+}
+
+#container {
+
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+#container #home, #container #datas {
+
+    background-color: transparent;
+    /* border: 2px solid var(--main-color); */
+    padding: 95px 40px 20px 20px;
+
+}
+
+#container nav {
+
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid var(--main-color); */
+    padding: 0px 40px 0px 20px;
+
+}
+
+#container nav h1 {
+
+    font-weight: 800;
+    color: var(--main-color);
+
+}
+
+#container nav #links {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+#container nav #links button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+#container nav #links #light_mode {
+
+    display: none;
+
+}
+
+#container nav #links button i {
+
+    font-size: 20px;
+    color: var(--main-color);
 
 }
