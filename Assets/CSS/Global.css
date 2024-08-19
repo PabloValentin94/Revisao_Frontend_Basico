@@ -61,7 +61,7 @@ body {
 
 }
 
-#container #home, #container #data {
+#container #home, #container #data, #container #curriculum, #container #contents {
 
     height: auto;
     width: 100%;
@@ -167,7 +167,7 @@ body {
 
 @media (max-width: 1024px) {
 
-    #container #home, #container #data {
+    #container #home, #container #data, #container #curriculum, #container #contents {
 
         padding: 95px 20px 20px 20px;
 
