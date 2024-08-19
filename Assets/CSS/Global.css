@@ -53,6 +53,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    background-color: transparent;
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-color: var(--main-color) var(--page-color);
@@ -61,11 +62,12 @@ body {
 
 }
 
-#container #home, #container #data, #container #curriculum, #container #contents {
+#container #home, #container #data, #container #curriculum, #container #personal_data, #container #projects {
 
     height: auto;
     width: 100%;
     min-height: 100%;
+    position: static;
     background-color: transparent;
     /* border: 2px solid var(--main-color); */
     padding: 95px 40px 20px 20px;
@@ -167,8 +169,9 @@ body {
 
 @media (max-width: 1024px) {
 
-    #container #home, #container #data, #container #curriculum, #container #contents {
+    #container #home, #container #data, #container #curriculum, #container #personal_data, #container #projects {
 
+        min-height: auto;
         padding: 95px 20px 20px 20px;
 
     }
