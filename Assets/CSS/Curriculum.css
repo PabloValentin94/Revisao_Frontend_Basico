@@ -130,14 +130,71 @@
 
 }
 
-#container #contents {
+#container #personal_data {
+
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: minmax(45%, auto) minmax(45%, auto);
+    gap: 20px;
+    
+}
+
+#container #personal_data section {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    /* background-color: brown; */
+    border: 2px solid var(--main-color);
+    border-radius: 15px;
+    padding: 10px;
     
+}
+
+#container #personal_data section h2 {
+
+    color: var(--main-color);
+
+}
+
+#container #personal_data section div {
+
+    height: auto;
+    width: 100%;
+    min-height: 92%;
+    border-top: 1px solid var(--main-color);
+    padding: 20px;
+
+}
+
+#container #personal_data section div ul {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
+
+}
+
+#container #personal_data section div ul li {
+
+    font-size: 20px;
+    color: var(--neutral-color);
+    text-align: center;
+
+}
+
+#container #personal_data section div ul li span {
+
+    font-weight: bold;
+    color: var(--main-color);
+    text-transform: uppercase;
+
 }
 
 /* Responsividade: */
@@ -149,6 +206,36 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 50px;
+
+    }
+
+    #container #personal_data {
+
+        grid-template-columns: repeat(2, 49%);
+        
+    }
+
+    #container #personal_data section div ul {
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    #container #personal_data {
+
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+
+    }
+
+    #container #personal_data section {
+
+        align-items: center;
 
     }
 
