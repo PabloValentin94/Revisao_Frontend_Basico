@@ -87,6 +87,7 @@ body {
     justify-content: space-between;
     /* border-bottom: 2px solid var(--main-color); */
     padding: 0px 40px 0px 20px;
+    z-index: 1;
 
 }
 
